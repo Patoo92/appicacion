@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámara Web</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="navigation.css">
+</head>
+<body>
+    <h1>URUGUAIANA</h1>
+    
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="fronterabr.html">IR A FOTOS COTECAR - LIBRES</a></li>
+        </ul>
+    </nav>
+
+    <h1>VACIA URU</h1>
+    <div>
+        <video id="videoElement" autoplay></video>
+        <button id="startButton">Iniciar Cámara</button>
+    </div>
+    
+    <div>
+        <button id="takePhotoButton">Tomar Foto</button> <br>
+        <br>
+ <!--        <input type="file" accept="image/*" id="fileInput" name="image"> -->
+        <input type="file" accept="image/*" id="fileInput" name="image"> <!-- aca puede estar el error ! -->
+
+    </div>
+
+
+    <canvas id="canvasElement"></canvas>
+
+    <div id="photoContainer"></div>
+
+    <!-- <form id="emailForm" method="POST" action="/send-email"> -->
+        <form id="emailForm" method="POST" action="/send-email" enctype="multipart/form-data"></form>
+        <input type="text" name="name" placeholder="Nombre y Apellido del chofer"> <BR></BR>
+        <input type="number" name="mic" placeholder="MIC BR"><BR></BR>
+        <input type="number" name="crt" placeholder="CRT BR"><BR></BR>
+        <input type="text" name="patenteTractor" placeholder="Patente Tractor"><BR></BR>
+        <input type="text" name="semiRemolque" placeholder="Semiremolque"><BR></BR>
+        <input type="email" name="email" placeholder="Correo Electrónico"><BR></BR>
+        <button type="submit">Enviar por Email</button>
+    </form>
+
+</body>
+</html>
