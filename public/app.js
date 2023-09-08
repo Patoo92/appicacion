@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             canvas.width = videoSettings.width;
             canvas.height = videoSettings.height;
         } catch (error) {
-            console.error('Error al acceder a la cámara:', error);
+            console.error('Error al acceder a la camara:', error);
         }
     });
 

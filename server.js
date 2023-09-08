@@ -39,10 +39,10 @@ app.post('/send-email', upload.array('image', 5), async (req, res) => {
         }
 
         await transporter.sendMail(mailOptions);
-        res.status(200).json({ message: 'Correo enviado con éxito' });
+        res.status(200).json({ message: 'Correo enviado con exito' });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: 'Error al enviar el correo electrónico' });
+        res.status(500).json({ message: 'Error al enviar el correo electronico' });
     }
 });
 
