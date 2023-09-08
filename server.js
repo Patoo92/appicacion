@@ -29,6 +29,13 @@ app.post('/send-email', upload.array('image', 5), async (req, res) => {
                 `,
             attachments: []
         };
+        const transporter = nodemailer.createTransport({
+            service: 'Gmail', // Pued usar 'Gmail' o cualquier otro proveedor de correo
+            auth: {
+                user: process.env.EMAIL_USER, // Debe coincidir con EMAIL_USER
+                pass: process.env.EMAIL_PASS, // Debe coincidir con EMAIL_PASS
+            },
+        });
 
         for (let i = 0; i < imageDataUrls.length; i++) {
             mailOptions.attachments.push({
